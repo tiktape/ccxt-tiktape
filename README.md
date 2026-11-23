@@ -87,9 +87,8 @@ from files.
 
 ## Free sample dataset
 
-BTC and ETH 1h/1d candles plus hourly funding, CC-BY-4.0:
-[Hugging Face](https://huggingface.co/datasets/tiktape/hyperliquid-btc-eth-ohlcv-funding-sample) ·
-[Kaggle](https://www.kaggle.com/datasets/tiktape/hyperliquid-btc-eth-ohlcv-funding-sample).
+BTC and ETH 1h/1d candles plus hourly funding (Aug-Oct 2026), CC-BY-4.0:
+[download from GitHub releases](https://github.com/tiktape/ccxt-tiktape/releases/tag/sample-dataset-2026-11).
 
 ## Development
 
