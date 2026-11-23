@@ -9,7 +9,7 @@ description = "Full Hyperliquid OHLCV history in CCXT: a drop-in ccxt.hyperliqui
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [{ name = "TikTape", email = "evan@tiktape.xyz" }]
 keywords = ["ccxt", "hyperliquid", "ohlcv", "candles", "historical-data", "backtesting", "crypto", "funding-rate"]
 classifiers = [
