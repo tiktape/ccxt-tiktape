@@ -39,3 +39,6 @@ packages = ["src/ccxt_tiktape"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["sample-dataset", ".github"]
