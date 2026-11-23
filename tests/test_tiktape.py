@@ -173,3 +173,8 @@ def test_http_errors_map_to_ccxt_errors(code, payload, error):
 
 def test_timeframes_include_6h():
     assert "6h" in ccxt_tiktape.tiktape().timeframes
+
+
+def test_default_timeout_is_raised_but_overridable():
+    assert ccxt_tiktape.tiktape().timeout == 30000
+    assert ccxt_tiktape.tiktape({"timeout": 5000}).timeout == 5000

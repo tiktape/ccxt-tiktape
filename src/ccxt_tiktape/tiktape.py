@@ -32,6 +32,7 @@ FREE_KEY_URL = "https://tiktape.xyz/?utm_source=pypi&utm_medium=package&utm_camp
 # Server-side maximum for one /api/v1/ohlcv request.
 MAX_LIMIT = 10000
 DEFAULT_LIMIT = 500
+DEFAULT_TIMEOUT_MS = 30000
 
 TIMEFRAMES = {
     "1m": "1m",
@@ -84,7 +85,10 @@ class tiktape(ccxt.hyperliquid):  # noqa: N801 - CCXT exchange classes are lower
         )
 
     def __init__(self, config: Optional[dict] = None):
-        super().__init__(config or {})
+        config = dict(config or {})
+        # A 10000-candle page can exceed CCXT's 10 s default on a cold server.
+        config.setdefault("timeout", DEFAULT_TIMEOUT_MS)
+        super().__init__(config)
         self._tiktape_last_request = 0.0
 
     # ------------------------------------------------------------------ OHLCV
