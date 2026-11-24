@@ -1,6 +1,6 @@
 """ccxt-tiktape: full Hyperliquid OHLCV history through CCXT, served by TikTape."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from .tiktape import FREE_KEY_URL, TIKTAPE_BASE_URL, tiktape  # noqa: E402
 
