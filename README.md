@@ -42,6 +42,24 @@ print(len(candles), "candles from", exchange.iso8601(candles[0][0]))
 Rows are standard CCXT candles: `[open_time_ms, open, high, low, close, volume]`,
 ascending, floats.
 
+### Runnable examples
+
+Each script runs as is with `TIKTAPE_API_KEY` set ([free key](https://tiktape.xyz/?utm_source=github&utm_medium=readme&utm_campaign=ccxt-tiktape-examples#freeKeyCard), last 30 days):
+
+| Script | What it shows |
+|---|---|
+| [`past_5000_limit.py`](https://github.com/tiktape/ccxt-tiktape/blob/main/examples/past_5000_limit.py) | 7 days of BTC 1m: `ccxt.hyperliquid` stops at 5000 candles, `ccxt-tiktape` returns all ~10,000 |
+| [`download_csv.py`](https://github.com/tiktape/ccxt-tiktape/blob/main/examples/download_csv.py) | Any symbol, timeframe and day range to CSV |
+| [`sma_crossover_backtest.py`](https://github.com/tiktape/ccxt-tiktape/blob/main/examples/sma_crossover_backtest.py) | A stdlib-only SMA crossover backtest on ETH 1h |
+
+```bash
+git clone https://github.com/tiktape/ccxt-tiktape && cd ccxt-tiktape/examples
+pip install ccxt-tiktape
+TIKTAPE_API_KEY=tt_... python past_5000_limit.py
+# ccxt.hyperliquid    5000 candles, first 2026-11-20T23:21:00.000Z
+# ccxt-tiktape       10078 candles, first 2026-11-17T10:41:00.000Z
+```
+
 ### Swap it into existing code
 
 ```python
